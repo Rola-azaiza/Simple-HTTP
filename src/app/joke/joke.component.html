@@ -1,0 +1,9 @@
+<div class="joke">
+  <div [hidden]="!data.hide">
+    <h1>{{ data.setup }}</h1>
+    <p>{{ data.punchline }}</p>
+  </div>
+  <button (click)="data.toggle()">
+    {{ data.hide ? 'Hide' : 'Show' }}
+  </button>
+</div>

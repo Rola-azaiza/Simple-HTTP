@@ -1,0 +1,34 @@
+<div>
+  <pre>{{ f.form.value | json }}</pre>
+  <form #f="ngForm" (ngSubmit)="onSubmit()" >
+          <div class="form-group">
+        <label>setup</label>
+        <input
+          type="text"
+          class="form-control"
+          name="setup"
+          [(ngModel)]="model.setup"
+          required
+          #setup="ngModel"
+        >
+      </div>
+      <div class="form-group">
+        <label>punchline</label>
+        <input
+          type="text"
+          class="form-control"
+          name="punchline"
+          [(ngModel)]="model.punchline"
+          required
+          #punchline="ngModel"
+        >
+      </div>
+        <div>
+      <button
+        [disabled]="f.invalid"
+        type="submit"
+        class="btn btn-primary" >Submit</button>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,22 @@
+<div>
+  <div class="form-group">
+    <input class="form-control"
+           type="text"
+           placeholder="setup"
+           #setup
+    >
+  </div>
+  <div class="form-group">
+    <input
+      class="form-control"
+      type="text"
+      placeholder="punchline"
+      #punchline
+    >
+  </div>
+  <button
+    class="btn btn-primary"
+    (click)="addJoke(setup.value, punchline.value)">
+    Add
+  </button>
+</div>
