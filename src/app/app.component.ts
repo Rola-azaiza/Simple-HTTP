@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {SimpleService} from './simple.service';
+import {LogService} from './log.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  constructor(private simpleService: SimpleService, private logged: LogService)
+  {}
 }

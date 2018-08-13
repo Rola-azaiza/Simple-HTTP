@@ -1,0 +1,16 @@
+<div class="parent">
+  <h3> Parent Component</h3>
+  <input type="text" [(ngModel)]="ss.value">
+  <p>
+Value is {{ss.value}}
+
+  </p>
+  <div>
+    <h3>View Child</h3>
+    <app-child></app-child>
+  </div>
+  <div>
+    <h3>Content Child</h3>
+    <ng-content></ng-content>
+  </div>
+</div>
