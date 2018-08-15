@@ -5,5 +5,5 @@ import { Injectable } from '@angular/core';
 })
 export class LogService {
 
-  constructor(public logged: Date) { }
+  constructor(public loggedAt: Date) { }
 }

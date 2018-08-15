@@ -10,6 +10,9 @@ import {SimpleService} from './simple.service';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import {LogService} from './log.service';
+import {HttpClientModule} from '@angular/common/http';
+import { PostsComponent } from './posts/posts.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,13 +20,16 @@ import {LogService} from './log.service';
     JokeListComponent,
     JokeFormComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [SimpleService,
+  providers: [
+    { provide: 'API_URL', useValue: 'https://jsonplaceholder.typicode.com' },
     {
       provide: LogService,
       useFactory() {
